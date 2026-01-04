@@ -1,0 +1,438 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+html, body {
+  max-width: 100%;
+  max-height: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  margin: 0;
+  padding: 0;
+}
+/* App Layout */
+.app-layout {
+  display: flex;
+  min-height: 100vh; /* ensures full viewport height */
+  width: 100vw; 
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #22477a;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch; /* makes sidebar match .app-layout height */
+}
+
+/* Sidebar Menu */
+.sidebar ul {
+
+  list-style: none;
+  margin-top: 2rem;
+   width: calc(100% - 2rem);
+  flex: 1; /* optional: pushes items down if needed */
+}
+
+.sidebar li {
+     
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+/* .sidebar li:hover {
+    background-color: #484848;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+} */
+
+/* Hamburger button (mobile) */
+.menu-btn {
+  display: none; /* hidden on desktop */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Main Area */
+.main-area {
+  /* flex: 1; */
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;     /* ← THIS is critical */
+  width: 100%;        /* ← ALSO critical */
+  min-width: 0; 
+}
+
+/* Header */
+.header {
+  height: 60px;
+  background-color: #b5d1ff;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  align-items: center; /* vertically center */
+  padding: 0 16px;
+}
+
+.header-title {
+  position: absolute;
+  left: 45%;
+  transform: translateX(-40%);
+  font-weight: bold;
+}
+.language-btn {
+  position: absolute;
+  right: 16px;
+  background-color: #22477a;
+  color: #ffffff;
+}
+/* Content */
+.content {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+/* Sidebar toggle states for mobile */
+nav.closed ul {
+  display: none;
+}
+
+nav.open ul {
+  display: block;
+}
+
+/* Desktop: always show menu */
+@media (min-width: 1024px) {
+  .sidebar ul {
+    display: block !important;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+}
+
+/* Tablet + Mobile */
+@media (max-width: 1023px) {
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    align-self: auto; /* natural height */
+  }
+
+  .menu-btn {
+    display: block; /* show hamburger */
+  }
+
+  nav.closed ul {
+    display: none;
+  }
+
+  nav.open ul {
+    display: block;
+  }
+
+  .main-area {
+    flex: 1;
+  }
+
+  .header {
+    height: 50px;
+    padding: 0 0.5rem;
+  }
+}
+
+/* Mobile only */
+@media (max-width: 767px) {
+  .sidebar {
+    padding: 0.5rem;
+  }
+
+  .main-area {
+    width: 100%;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+  .filter-bar {
+    flex-direction: column;
+    width: 100%;
+  min-width: 200px;
+  }
+  .summary-metrics {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+.energy-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.energy-table th,
+.energy-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.energy-table .high {
+  color: red;
+  font-weight: bold;
+}
+
+.energy-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #fff;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.badge.high {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge.normal {
+  background: #dcfce7;
+  color: #166534;
+}
+.filter-bar{
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  
+}
+.filter-bar select{
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+
+}
+
+.summary-metrics {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  font-weight: bold; 
+}
+/* Hover effect */
+.energy-table tr:hover {
+  background-color: #edf1f8;
+  cursor: pointer;
+}
+/* Table header cursor */
+.energy-table th {
+  cursor: pointer;
+  background: #e3edff;
+  padding: 0.75rem;
+}/* Cards hover */
+.energy-card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Summary metrics colors */
+.summary-metrics span {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background: #f3f4f6;
+  color: #111;
+}
+/* Table high/normal */
+.energy-table .high {
+  color: #b91c1c;
+  font-weight: bold;
+}
+.energy-table .normal {
+  color: #166534;
+  font-weight: bold;
+}
+
+.menu-link {
+  color: #e3dfdf;
+  text-decoration: none;
+  font-weight: normal;
+  transition: color 0.2s, border-bottom 0.2s;
+  padding: 5px 0;
+}
+
+.menu-link:hover {
+  color: #848585;
+ /*  border-bottom: 2px solid #007bff; */
+}
+
+.menu-link.active {
+  color: #92a7be;
+  font-weight: bold;
+ /*  border-bottom: 2px solid #92a7be; */
+}
+/* .dashboard {
+display: flex;
+
+} */
+ .kpiFlex {
+display: flex;
+flex-direction : column;
+}
+.graphGrid{
+  display: grid;
+grid-template-columns: repeat(2, 1fr);
+}
+.chart{
+ 
+     height: 256px !important;
+    width: 90%;
+}
+.chartContainer{
+  
+    display: block;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid #dfdddd;
+    background-color: #f7f6fa;
+    box-shadow: 1px 2px #d5d1d1;
+}
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 16px;
+  
+    padding: 0.5rem;
+   
+}
+
+.kpi-card {
+  padding:2.5rem;
+  border-radius: 8px;
+  background: #ea9595;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);  
+  
+}
+
+.kpi-label {
+  font-size: 14px;
+  color: #263653;
+}
+
+.kpi-value {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+   margin-top:1rem;
+  
+  
+}
+
+/* Full-width row (line chart) */
+.grid-full {
+  grid-column: span 12;
+}
+
+/* Half-width items (bar + pie) */
+.grid-2 {
+  grid-column: span 8;
+}
+.grid-3 {
+  grid-column: span 4;
+}
+
+/* Optional: card styling */
+.chart-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+   border-radius: 1rem;
+    border: 1px solid #dfdddd;
+    background-color: #f7f6fa;
+    box-shadow: 1px 2px #d5d1d1;
+
+}
+
+.kpi-bar-row {
+ display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* Adjust ratio so Pie is slightly smaller */
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* KPI area */
+.kpi-section {
+  width: 100%;
+  border: 1px solid #dfdddd;
+  background-color: #f7f6fa;
+  box-shadow: 1px 2px #d5d1d1;
+  border-radius: 1rem;
+}
+
+/* Pie chart container */
+.bar-section {
+ background: #fff;
+  border-radius: 12px;
+  padding: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the pie horizontally */
+  justify-content: center;
+  
+   border: 1px solid #dfdddd;
+    background-color: #f7f6fa;
+    box-shadow: 2px 4px #d5d1d1;
+}
+/* Resize the actual Chart SVG/Canvas */
+.pie-section canvas, 
+.pie-section .recharts-wrapper { 
+  max-width: 400px !important; /* Limits the pie chart size */
+  max-height: 250px !important;
+}
+.pagination {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #5a5959;
+  background: #22477a;
+  cursor: pointer;
+  color:white;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

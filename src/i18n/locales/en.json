@@ -1,0 +1,60 @@
+
+{
+  "nav": {
+    "energy": "Energy",
+    "dashboard": "Dashboard",
+    "reports": "Reports",
+    "settings": "Settings"
+  },
+  "header": {
+    "welcome": "Welcome"  
+  },
+
+  "dashboard": {
+    "title": "Energy Usage Dashboard",
+    "totalLocations": "Total Locations",
+    "totalUsage": "Total Usage (kWh)",
+    "highUsage": "High Usage"
+  },
+
+  "table": {
+    "location": "Location",
+    "usage": "Usage",
+    "recordedDate": "Recorded Date",
+    "status": "Status"
+  },
+
+  "filters": {
+    "selectMonth": "Select Month",
+    "selectYear": "Select Year",
+    "selectStatus": "Select Status",
+    "selectLocation": "Select Location"
+  },
+
+  "status": {
+    "High": "High",
+    "Normal": "Normal",
+    "Critical": "Critical"
+  },
+  "charts": {
+    "usageTrend": "Energy Usage Trend",
+    "usageByLocation": "Energy Usage By Location",
+    "statusDistribution" : "Status Distribution"
+  },
+  "kpiCards" : {
+    "totalUsage" : "Total Usage",
+    "averageUsage" : "Average Usage",
+    "totalRecords" : "Total Records",
+    "highestUsage" : "Highest Usage"
+  },
+  "pagination" :{
+    "next" : "Next",
+    "prev": "Prev",
+    "page" : "Page",
+    "of": "of"
+  },
+  
+  "months" : ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+
+  "short_months" : ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+}
