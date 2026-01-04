@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next';
 type Props = {
   data: EnergyRecord[];
   //onSort: (field: "location" | "usageKwh" | "recordedAt" | "status") => void;
-  sortField: string;
-  sortDirection: "asc" | "desc";
+  //sortField: string;
+  //sortDirection: "asc" | "desc";
   loading : boolean;
   error : string;
   totalPages : number;
@@ -15,7 +15,7 @@ type Props = {
 
 };
 
-const EnergyTable = ({ data, sortField, sortDirection, totalPages, page,formatDate, handlePage }: Props) => {
+const EnergyTable = ({ data, totalPages, page,formatDate, handlePage }: Props) => {
     const { t } = useTranslation();
  /*  const renderSortArrow = (field: string) => {
     if (sortField !== field) return "↕";

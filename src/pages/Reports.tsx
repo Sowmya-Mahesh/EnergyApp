@@ -2,24 +2,24 @@ import { useEffect, useState, useMemo } from "react";
 import { type EnergyRecord } from "../data/energyData";
 import EnergyTable from "../components/EnergyTable";
 import EnergyCard from "../components/EnergyCard";
-import FilterBar from "../components/FilterBar";
+//import FilterBar from "../components/FilterBar";
 import { useTranslation } from 'react-i18next';
 
 import { EnergyService } from '../services/energyService';
-type SortField = "location" | "usageKwh" | "recordedAt" | "status" | "";
-type SortDirection = "asc" | "desc";
+/* type SortField = "location" | "usageKwh" | "recordedAt" | "status" | "";
+type SortDirection = "asc" | "desc"; */
 
 const Reports: React.FC = () => {
   const { t } = useTranslation();
   
-  const [month, setMonth] = useState<number>(0);
+/*   const [month, setMonth] = useState<number>(0);
   const [year, setYear] = useState<number>(0);
   const [status, setStatus] = useState("");
   const [location, setLocation] = useState("");
 
 
   const [sortField, setSortField] = useState<SortField>("");
-  const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
+  const [sortDirection, setSortDirection] = useState<SortDirection>("asc"); */
   const [records, setRecords] = useState<EnergyRecord[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -142,7 +142,7 @@ const paginatedRecords = useMemo(() => {
         paginatedRecords.map((item) => <EnergyCard key={item.id} record={item} />)
       ) : (
        <div className="table-wrapper">
-         <EnergyTable data={paginatedRecords} loading={loading} totalPages={totalPages} page={page} handlePage={handlePage} error={error} formatDate={formatDate} sortField={sortField} sortDirection={sortDirection} />
+         <EnergyTable data={paginatedRecords} loading={loading} totalPages={totalPages} page={page} handlePage={handlePage} error={error} formatDate={formatDate} />
          
          </div>
       )} 
