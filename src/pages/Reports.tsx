@@ -26,7 +26,6 @@ const Reports: React.FC = () => {
   const [page, setPage] = useState(1);
   const pageSize = 10;
 
- 
 const totalPages = Math.ceil(records.length / pageSize);
 
 const paginatedRecords = useMemo(() => {
