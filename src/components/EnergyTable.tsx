@@ -12,7 +12,6 @@ type Props = {
   page:number;
   formatDate: (date: string) => string;
   handlePage : (page : number) => void;
-
 };
 
 const EnergyTable = ({ data, totalPages, page,formatDate, handlePage }: Props) => {
