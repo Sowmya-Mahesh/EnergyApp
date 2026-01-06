@@ -16,6 +16,7 @@ const Reports: React.FC = () => {
   const [year, setYear] = useState<number>(0);
   const [status, setStatus] = useState("");
   const [location, setLocation] = useState("");
+  
   const [sortField, setSortField] = useState<SortField>("");
   const [sortDirection, setSortDirection] = useState<SortDirection>("asc"); */
   const [records, setRecords] = useState<EnergyRecord[]>([]);

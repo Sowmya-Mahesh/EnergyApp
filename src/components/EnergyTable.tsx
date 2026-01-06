@@ -21,6 +21,7 @@ const EnergyTable = ({ data, totalPages, page,formatDate, handlePage }: Props) =
     return sortDirection === "asc" ? "↑" : "↓";
   };
  */
+
   return (
     <>
     <table className="energy-table">
