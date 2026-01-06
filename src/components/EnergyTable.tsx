@@ -12,7 +12,6 @@ type Props = {
   page:number;
   formatDate: (date: string) => string;
   handlePage : (page : number) => void;
-
 };
 
 const EnergyTable = ({ data, totalPages, page,formatDate, handlePage }: Props) => {
@@ -22,6 +21,7 @@ const EnergyTable = ({ data, totalPages, page,formatDate, handlePage }: Props) =
     return sortDirection === "asc" ? "↑" : "↓";
   };
  */
+
   return (
     <>
     <table className="energy-table">
