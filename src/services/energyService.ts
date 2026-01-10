@@ -25,21 +25,21 @@ const getAll = async () => {
 }; */
 const getUsageTrend = async (year: number = 2025): Promise<UsageTrendDto[]> => {
   const { data } = await axios.get(
-    `${API_URL}/dashboard/usage-trend`,
+    `${API_URL}/energy/dashboard/usage-trend`,
     { params: { year } }
   );
   return data;
 };
  const getUsageByLocation = async (year: number, month: number): Promise<UsageByLocation[]> => {
   const { data } = await axios.get(
-    `${API_URL}/dashboard/usage-by-location?year=${year}&month=${month}`
+    `${API_URL}/energy/dashboard/usage-by-location?year=${year}&month=${month}`
   );
   return data;
 };
 
  const getStatusDistribution = async (year: number, month: number) : Promise<StatusDistribution[]> => {
   const { data } = await axios.get(
-    `${API_URL}/dashboard/status-distribution`,
+    `${API_URL}/energy/dashboard/status-distribution`,
     {params : {year, month}},
    
   );
@@ -47,8 +47,7 @@ const getUsageTrend = async (year: number = 2025): Promise<UsageTrendDto[]> => {
 };
  const getCurrentYearEnergyData = async () : Promise<StatusDistribution[]> => {
   const { data } = await axios.get(
-    `${API_URL}/dashboard/get-current-year-energy-data`
-  
+    `${API_URL}/energy/dashboard/get-current-year-energy-data`
   );
   return data;
 };
