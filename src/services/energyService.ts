@@ -1,8 +1,12 @@
 import axios from 'axios';
 import type { UsageTrendDto, UsageByLocation,StatusDistribution } from "../data/energyData";
 
-const API_URL = 'http://localhost:5004/api/energy';
 
+const API_URL = import.meta.env.VITE_API_URL;
+/* 
+export const api = axios.create({
+  baseURL: import.meta.env.VITE_API_URL
+}); */
 const getAll = async () => {
   try {
     const { data } = await axios.get(API_URL);
