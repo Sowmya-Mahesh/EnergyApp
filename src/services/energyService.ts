@@ -48,7 +48,6 @@ const getUsageTrend = async (year: number = 2025): Promise<UsageTrendDto[]> => {
  const getCurrentYearEnergyData = async () : Promise<StatusDistribution[]> => {
   const { data } = await axios.get(
     `${API_URL}/energy/dashboard/get-current-year-energy-data`
-  
   );
   return data;
 };
