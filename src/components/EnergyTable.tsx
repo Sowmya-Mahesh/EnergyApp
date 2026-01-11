@@ -8,7 +8,7 @@ type Props = {
   //sortDirection: "asc" | "desc";
   loading: boolean;
   error: string;
-
+  formatDate: (date: string) => string;
 };
 
 const EnergyTable = ({ data, formatDate }: Props) => {

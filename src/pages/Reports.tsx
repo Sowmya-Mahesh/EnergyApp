@@ -145,7 +145,7 @@ const Reports: React.FC = () => {
 
         : (
           <div className="table-wrapper">
-            <EnergyTable data={paginatedRecords} loading={loading} totalPages={totalPages} page={page} handlePage={handlePage} error={error} formatDate={formatDate} />
+            <EnergyTable data={paginatedRecords} loading={loading} error={error} formatDate={formatDate} />
 
           </div>
         )}
