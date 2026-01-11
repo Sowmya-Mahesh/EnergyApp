@@ -6,7 +6,7 @@
     "settings": "Stillingar"
   },
   "header": {
-    "welcome":"Velkomin"
+    "welcome": "Velkomin"
   },
   "dashboard": {
     "title": "Orkunotkunaryfirlit",
@@ -14,14 +14,12 @@
     "totalUsage": "Heildarnotkun (kWh)",
     "highUsage": "Mikil notkun"
   },
-
   "table": {
     "location": "Staðsetning",
     "usage": "Notkun",
     "recordedDate": "Skráningardagur",
     "status": "Staða"
   },
-
   "filters": {
     "selectMonth": "Veldu mánuð",
     "selectYear": "Veldu ár",
@@ -36,21 +34,46 @@
   "charts": {
     "usageTrend": "Orkunotkun yfir tíma",
     "usageByLocation": "Orkunotkun eftir staðsetningu",
-    "statusDistribution" : "Dreifing stöðu"
+    "statusDistribution": "Dreifing stöðu"
   },
-  "kpiCards" : {
-    "totalUsage" : "Heildar Orkunotkun",
-    "averageUsage" : "Meðal Orkunotkun",
-    "totalRecords" : "Heildarfjöldi Skráninga",
-    "highestUsage" : "Hæsta Orkunotkun"
+  "kpiCards": {
+    "totalUsage": "Heildar Orkunotkun",
+    "averageUsage": "Meðal Orkunotkun",
+    "totalRecords": "Heildarfjöldi Skráninga",
+    "highestUsage": "Hæsta Orkunotkun"
   },
-  "pagination" :{
-    "next" : "Næsta",
+  "pagination": {
+    "next": "Næsta",
     "prev": "Fyrri",
-    "page" : "Síða",
+    "page": "Síða",
     "of": "af"
   },
-  "months": ["janúar", "febrúar", "mars", "apríl", "maí", "júní", "júlí", "ágúst", "september", "október", "nóvember", "desember"],
-  "short_months" :  ["Jan","Feb","Mar","Apr","Maí","Jún","Júl","Ágú","Sep","Okt","Nóv","Des"]
-
+  "months": [
+    "janúar",
+    "febrúar",
+    "mars",
+    "apríl",
+    "maí",
+    "júní",
+    "júlí",
+    "ágúst",
+    "september",
+    "október",
+    "nóvember",
+    "desember"
+  ],
+  "short_months": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "Maí",
+    "Jún",
+    "Júl",
+    "Ágú",
+    "Sep",
+    "Okt",
+    "Nóv",
+    "Des"
+  ]
 }

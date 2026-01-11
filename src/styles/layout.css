@@ -175,6 +175,7 @@ nav.open ul {
     flex-wrap: wrap;
     flex-direction: row;
   }
+
   .dashboard-grid {
     display: flex !important;
     flex-wrap: wrap;

@@ -3,7 +3,7 @@ export type EnergyRecord = {
   location: string;
   usageKwh: number;
   recordedAt: string;
-  status: "Normal" | "High"| "Critical";
+  status: "Normal" | "High" | "Critical";
 };
 export interface UsageTrendDto {
   month: number; // 1–12
