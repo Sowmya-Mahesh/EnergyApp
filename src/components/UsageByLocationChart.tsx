@@ -16,9 +16,9 @@ for (let i = 0; i < data.length; i++) {
 }
   return (
      <div className="chart">
-      <h3>{t('charts.usageByLocation')}</h3>
+      <h3 style={{margin: "1rem"}}>{t('charts.usageByLocation')}</h3>
 
-    <ResponsiveContainer  >
+    <ResponsiveContainer height="90%" >
       <BarChart data={data}>
         <XAxis dataKey="location" />
         <YAxis />
