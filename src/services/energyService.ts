@@ -9,8 +9,10 @@ export const api = axios.create({
 }); */
 const getAll = async () => {
   try {
-    const { data } = await axios.get(API_URL);
-    return data; // returns array of EnergyRecordDto
+   const { data } = await axios.get(
+    `${API_URL}/energy`
+  );
+  return data;
   } catch (error) {
     throw error; // component will handle error
   }
