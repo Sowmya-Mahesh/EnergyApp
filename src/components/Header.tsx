@@ -16,14 +16,14 @@ const Header = () => {
   // Toggle function
   const changeLanguage = () => {
     setLang(lang === 'en' ? 'is' : 'en');
-  }; 
+  };
   return (
     <header className="header">
       <span className='header-title'>{t('header.welcome')}</span>
       <button className='language-btn' onClick={changeLanguage}>
-      {lang  === 'en' ? 'IS' : 'EN'}
+        {lang === 'en' ? 'IS' : 'EN'}
       </button>
-      
+
     </header>
   );
 };
